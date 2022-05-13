@@ -1,11 +1,11 @@
 <?php
 
-namespace App\Http\Controllers\v1;
+namespace App\Http\Controllers;
 
 use App\Models\CustomerInfoModel;
 use Illuminate\Http\Request;
 
-class CustomerInfoController extends Controller {
+class CustomerInfoV2Controller extends Controller {
     /**
      * Create a new controller instance.
      *
@@ -18,14 +18,22 @@ class CustomerInfoController extends Controller {
     public function getAllCustomerInfo() {
         $data = $this->CustomerInfoModel->getAllCustomerInfo();
 
-        return response($data);
+        return response()->json([
+            "status" => 1,
+            "message" => "Succeded",
+            "data" => $data
+        ]);
     }
 
     public function getCustomerInfoById(Request $request) {
         $id_customer_info = $request->input("id_customer_info");
         $data = $this->CustomerInfoModel->getCustomerInfoById($id_customer_info);
 
-        return response()->json($data);
+        return response()->json([
+            "status" => 1,
+            "message" => "Succeded",
+            "data" => $data
+        ]);
     }
 
 }

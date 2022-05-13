@@ -1,11 +1,11 @@
 <?php
 
-namespace App\Http\Controllers\v1;
+namespace App\Http\Controllers;
 
 use App\Models\ProductInfoModel;
 use Illuminate\Http\Request;
 
-class ProductInfoController extends Controller {
+class ProductInfoV1Controller extends Controller {
     /**
      * Create a new controller instance.
      *

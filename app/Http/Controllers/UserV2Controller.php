@@ -1,11 +1,11 @@
 <?php
 
-namespace App\Http\Controllers\v1;
+namespace App\Http\Controllers;
 
 use App\Models\UserModel;
 use Illuminate\Http\Request;
 
-class UserController extends Controller {
+class UserV2Controller extends Controller {
     /**
      * Create a new controller instance.
      *
