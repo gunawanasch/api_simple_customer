@@ -21,7 +21,7 @@ class CustomerInfoV2Controller extends Controller {
         return response()->json([
             "status" => 1,
             "message" => "Succeded",
-            "data" => $data
+            "data_get_all_customer_info" => $data
         ]);
     }
 
@@ -32,7 +32,7 @@ class CustomerInfoV2Controller extends Controller {
         return response()->json([
             "status" => 1,
             "message" => "Succeded",
-            "data" => $data
+            "data_get_customer_info_by_id" => $data
         ]);
     }
 
